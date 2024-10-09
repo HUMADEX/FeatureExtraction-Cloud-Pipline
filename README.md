@@ -27,10 +27,11 @@ Installation
 1. Clone this repository
 2. Install required libraries:
 3. Usage
-    Prepare your diary videos.
-    Run the main script (flask_smile_v8.py).
-    The extracted features will be stored in the specified output directory.
- Contributing
+    3.1. Prepare your diary videos.
+    3.2. Run the main script (flask_smile_v8.py).
+    3.3. The extracted features will be stored in the specified output directory.
+ 
+Contributing
 
 Contributions are welcome! Please feel free to fork the repository and submit pull requests.
 
