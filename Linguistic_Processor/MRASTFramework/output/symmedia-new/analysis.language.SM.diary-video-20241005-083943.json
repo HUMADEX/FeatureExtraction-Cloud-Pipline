@@ -1,0 +1,228 @@
+{
+    "depressed": 0,
+    "words": 18,
+    "sentences": 1,
+    "statements": 1,
+    "clauses": 1,
+    "sentece_length_data": {
+        "avg": 18.0,
+        "median": 18.0,
+        "interquartile": 0.0
+    },
+    "clauses_data": {
+        "avg": 1.0,
+        "median": 1.0,
+        "interquartile": 0.0
+    },
+    "lexsophistication_data": {
+        "avg": 10.0,
+        "median": 10.0,
+        "interquartile": 0.0
+    },
+    "sentece_unique_words_data": {
+        "avg": 18.0,
+        "median": 18.0,
+        "interquartile": 0.0
+    },
+    "unique_words": {
+        "count": 18,
+        "percentage": 1.0
+    },
+    "language": {
+        "sentiment": {
+            "statement": {
+                "positive": {
+                    "count": 1,
+                    "percentage": 1.0
+                },
+                "negative": {
+                    "count": 0,
+                    "percentage": 0.0
+                },
+                "neutral": {
+                    "count": 0,
+                    "percentage": 0.0
+                }
+            },
+            "sentence": {
+                "positive": {
+                    "count": 1,
+                    "percentage": 1.0
+                },
+                "negative": {
+                    "count": 0,
+                    "percentage": 0.0
+                },
+                "neutral": {
+                    "count": 0,
+                    "percentage": 0.0
+                }
+            },
+            "word": {
+                "positive": {
+                    "count": 1,
+                    "percentage": 0.0556
+                },
+                "negative": {
+                    "count": 0,
+                    "percentage": 0.0
+                },
+                "neutral": {
+                    "count": 17,
+                    "percentage": 0.9444
+                }
+            }
+        },
+        "clasuses_per_statement": {
+            "avg": [
+                1.0
+            ],
+            "map": [
+                [
+                    1
+                ]
+            ],
+            "median": [
+                1
+            ],
+            "interquartile": [
+                0.0
+            ]
+        },
+        "lexialspohistication_per_statement": {
+            "avg": [
+                10.0
+            ],
+            "map": [
+                [
+                    10
+                ]
+            ],
+            "median": [
+                10
+            ],
+            "interquartile": [
+                0.0
+            ],
+            "mapdetail": [
+                [
+                    {
+                        "count": 10,
+                        "percent": 0.5556,
+                        "lengths": [
+                            6,
+                            5,
+                            6,
+                            6,
+                            7,
+                            6,
+                            6,
+                            6,
+                            6,
+                            6
+                        ]
+                    }
+                ]
+            ]
+        },
+        "lexial_density_per_sentece": [
+            [
+                {
+                    "wps": 18,
+                    "typesmap": [
+                        "VERB|Mood=Ind|Number=Sing|Tense=Pres|VerbForm=Fin",
+                        "VERB|VerbForm=Ger",
+                        "VERB|VerbForm=Inf",
+                        "AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin",
+                        "NOUN|Number=Sing",
+                        "PROPN|Number=Sing",
+                        "ADP|",
+                        "PRON|Case=Acc|Number=Sing|Person=1|PronType=Prs",
+                        "DET|Definite=Ind|PronType=Art",
+                        "NUM|NumType=Card",
+                        "PRON|Case=Acc|Person=2|PronType=Prs"
+                    ],
+                    "value": 0.6111,
+                    "text": "Mister*grima*putter*monami*a*milagro*amadis*eyeing*you*as*one*desert*induce*me*was*of*o*voodoo*"
+                }
+            ]
+        ],
+        "lexial_density_per_sentece_nofeats": [
+            [
+                {
+                    "wps": 18,
+                    "typesmap": [
+                        "ADP",
+                        "AUX",
+                        "VERB",
+                        "NUM",
+                        "DET",
+                        "PROPN",
+                        "PRON",
+                        "NOUN"
+                    ],
+                    "value": 0.4444
+                }
+            ]
+        ],
+        "sentece_length": {
+            "avg": [
+                18.0
+            ],
+            "map": [
+                [
+                    18
+                ]
+            ],
+            "median": [
+                18
+            ],
+            "interquartile": [
+                0.0
+            ]
+        },
+        "sentece_unique_words": {
+            "avg": [
+                18.0
+            ],
+            "map": [
+                [
+                    18
+                ]
+            ],
+            "median": [
+                18
+            ],
+            "interquartile": [
+                0.0
+            ]
+        },
+        "pronoun_fps": {
+            "count": 1,
+            "percentage": 0.0556
+        },
+        "absolutist_words_small": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "absolutist_words_full": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "depression_specific_words": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "pastwords": {
+            "count": 1,
+            "percentage": 0.0556
+        }
+    },
+    "avg_lexdensity_per_specific_POS": 0.5556,
+    "avg_lexdensity_senetece": 0.6111,
+    "avg_lexdensity_senetece_nofeats": 0.4444,
+    "avg_lexdensity_video": 0.6111111111111112,
+    "avg_lexdensity_video_nofeats": 0.4444444444444444,
+    "avg_lexdensity_video_normalized": 0.11,
+    "avg_lexdensity_video_nofeats_normalized": 0.08
+}

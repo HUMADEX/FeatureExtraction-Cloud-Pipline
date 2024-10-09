@@ -1,0 +1,213 @@
+{
+    "depressed": 0,
+    "words": 6,
+    "sentences": 1,
+    "statements": 1,
+    "clauses": 1,
+    "sentece_length_data": {
+        "avg": 6.0,
+        "median": 6.0,
+        "interquartile": 0.0
+    },
+    "clauses_data": {
+        "avg": 1.0,
+        "median": 1.0,
+        "interquartile": 0.0
+    },
+    "lexsophistication_data": {
+        "avg": 3.0,
+        "median": 3.0,
+        "interquartile": 0.0
+    },
+    "sentece_unique_words_data": {
+        "avg": 6.0,
+        "median": 6.0,
+        "interquartile": 0.0
+    },
+    "unique_words": {
+        "count": 6,
+        "percentage": 1.0
+    },
+    "language": {
+        "sentiment": {
+            "statement": {
+                "positive": {
+                    "count": 0,
+                    "percentage": 0.0
+                },
+                "negative": {
+                    "count": 1,
+                    "percentage": 1.0
+                },
+                "neutral": {
+                    "count": 0,
+                    "percentage": 0.0
+                }
+            },
+            "sentence": {
+                "positive": {
+                    "count": 0,
+                    "percentage": 0.0
+                },
+                "negative": {
+                    "count": 1,
+                    "percentage": 1.0
+                },
+                "neutral": {
+                    "count": 0,
+                    "percentage": 0.0
+                }
+            },
+            "word": {
+                "positive": {
+                    "count": 0,
+                    "percentage": 0.0
+                },
+                "negative": {
+                    "count": 0,
+                    "percentage": 0.0
+                },
+                "neutral": {
+                    "count": 6,
+                    "percentage": 1.0
+                }
+            }
+        },
+        "clasuses_per_statement": {
+            "avg": [
+                1.0
+            ],
+            "map": [
+                [
+                    1
+                ]
+            ],
+            "median": [
+                1
+            ],
+            "interquartile": [
+                0.0
+            ]
+        },
+        "lexialspohistication_per_statement": {
+            "avg": [
+                3.0
+            ],
+            "map": [
+                [
+                    3
+                ]
+            ],
+            "median": [
+                3
+            ],
+            "interquartile": [
+                0.0
+            ],
+            "mapdetail": [
+                [
+                    {
+                        "count": 3,
+                        "percent": 0.5,
+                        "lengths": [
+                            4,
+                            7,
+                            4
+                        ]
+                    }
+                ]
+            ]
+        },
+        "lexial_density_per_sentece": [
+            [
+                {
+                    "wps": 6,
+                    "typesmap": [
+                        "NOUN|Number=Plur",
+                        "VERB|Tense=Pres|VerbForm=Part",
+                        "AUX|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin",
+                        "DET|Definite=Def|PronType=Art",
+                        "NOUN|Number=Sing",
+                        "ADP|"
+                    ],
+                    "value": 1.0,
+                    "text": "Kids*are*talking*by*the*door*"
+                }
+            ]
+        ],
+        "lexial_density_per_sentece_nofeats": [
+            [
+                {
+                    "wps": 6,
+                    "typesmap": [
+                        "AUX",
+                        "NOUN",
+                        "DET",
+                        "ADP",
+                        "VERB"
+                    ],
+                    "value": 0.8333
+                }
+            ]
+        ],
+        "sentece_length": {
+            "avg": [
+                6.0
+            ],
+            "map": [
+                [
+                    6
+                ]
+            ],
+            "median": [
+                6
+            ],
+            "interquartile": [
+                0.0
+            ]
+        },
+        "sentece_unique_words": {
+            "avg": [
+                6.0
+            ],
+            "map": [
+                [
+                    6
+                ]
+            ],
+            "median": [
+                6
+            ],
+            "interquartile": [
+                0.0
+            ]
+        },
+        "pronoun_fps": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "absolutist_words_small": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "absolutist_words_full": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "depression_specific_words": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "pastwords": {
+            "count": 0,
+            "percentage": 0.0
+        }
+    },
+    "avg_lexdensity_per_specific_POS": 0.5,
+    "avg_lexdensity_senetece": 1.0,
+    "avg_lexdensity_senetece_nofeats": 0.8333,
+    "avg_lexdensity_video": 1.0,
+    "avg_lexdensity_video_nofeats": 0.8333333333333334,
+    "avg_lexdensity_video_normalized": 0.06,
+    "avg_lexdensity_video_nofeats_normalized": 0.05
+}

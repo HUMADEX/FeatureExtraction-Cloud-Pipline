@@ -1,0 +1,131 @@
+{
+    "video_id": [],
+    "A1_Use_of_firstperson_pronouns_percentage": [
+        0.0622
+    ],
+    "A1_Use_of_firstperson_pronouns_words_normalized": [
+        62.15
+    ],
+    "A2_Use_of_negatively_valanced_words": {
+        "positive": {
+            "percentage": [
+                0.0343
+            ],
+            "words_normalized": [
+                34.32
+            ]
+        },
+        "negative": {
+            "percentage": [
+                0.0315
+            ],
+            "words_normalized": [
+                31.54
+            ]
+        },
+        "neutral": {
+            "percentage": [
+                0.9341
+            ],
+            "words_normalized": [
+                934.14
+            ]
+        }
+    },
+    "A2_sentiment_sentece": {
+        "positive": {
+            "percentage": [
+                0.0
+            ],
+            "sentece_normalized": [
+                0.0
+            ]
+        },
+        "negative": {
+            "percentage": [
+                0.8333
+            ],
+            "sentece_normalized": [
+                2833.33
+            ]
+        },
+        "neutral": {
+            "percentage": [
+                0.1667
+            ],
+            "sentece_normalized": [
+                83916.67
+            ]
+        }
+    },
+    "A2_Use_of_negatively_valanced_words_positive_percentage": [
+        0.0343
+    ],
+    "A2_Use_of_negatively_valanced_words_positive_words_normalized": [
+        34.32
+    ],
+    "A2_Use_of_negatively_valanced_words_negative_percentage": [
+        0.0315
+    ],
+    "A2_Use_of_negatively_valanced_words_negative_words_normalized": [
+        31.54
+    ],
+    "A2_Use_of_negatively_valanced_words_neutral_percentage": [
+        0.9341
+    ],
+    "A2_Use_of_negatively_valanced_words_neutral_words_normalized": [
+        934.14
+    ],
+    "A2_Sentiment_sentece_positive_percentage": [
+        0.0
+    ],
+    "A2_Sentiment_sentece_negative_percentage": [
+        0.8333
+    ],
+    "A2_Sentiment_sentece_neutral_percentage": [
+        0.1667
+    ],
+    "A3_Explicit_mention_of_depression_words_percentage": [
+        0.0
+    ],
+    "A3_Explicit_mention_of_depression_words_normalized": [
+        0.0
+    ],
+    "A4_Use_of_absolutist_words_small_percentage": [
+        0.0009
+    ],
+    "A4_Use_of_absolutist_words_small_normalized": [
+        0.93
+    ],
+    "A4_Use_of_absolutist_words_full_percentage": [
+        0.0065
+    ],
+    "A4_Use_of_absolutist_words_full_normalized": [
+        6.49
+    ],
+    "A5_Focusing_on_past_words_percentage": [
+        0.064
+    ],
+    "A5_Focusing_on_past_words_normalized": [
+        64.01
+    ],
+    "A61_1_Syntactic_complexity_sentece_length": [
+        89.8333
+    ],
+    "A61_2_Syntactic_complexity_sentece_complexity": [
+        2.3333
+    ],
+    "A62_1_Lexical_complexity_lexical_diversity": [
+        59.5833
+    ],
+    "A62_2_Lexical_complexity_lexical_sophistication": [
+        33.25
+    ],
+    "A62_3_Lexical_complexity_lexical_density": [
+        37.013
+    ],
+    "total_videos": 0,
+    "depressive": [
+        0
+    ]
+}

@@ -1,0 +1,154 @@
+{
+    "total_videos": 1,
+    "video_id": [
+        "30.csv"
+    ],
+    "depressive": [
+        0
+    ],
+    "avg_lexdensity_per_specific_POS": [
+        0.5556
+    ],
+    "avg_lexdensity_senetece": [
+        0.7814
+    ],
+    "avg_lexdensity_senetece_nofeats": [
+        0.5978
+    ],
+    "avg_lexdensity_video": [
+        0.5111111111111111
+    ],
+    "avg_lexdensity_video_nofeats": [
+        0.2222222222222222
+    ],
+    "avg_lexdensity_video_normalized": [
+        0.23
+    ],
+    "avg_lexdensity_video_nofeats_normalized": [
+        0.1
+    ],
+    "A1_first_p_pronouns_percentage": [
+        0.1111
+    ],
+    "A1_first_p_pronouns_words_normalized": [
+        111.11
+    ],
+    "A2_sentiment_words": {
+        "positive": {
+            "percentage": [
+                0.0667
+            ],
+            "words_normalized": [
+                66.67
+            ]
+        },
+        "negative": {
+            "percentage": [
+                0.0222
+            ],
+            "words_normalized": [
+                22.22
+            ]
+        },
+        "neutral": {
+            "percentage": [
+                0.9111
+            ],
+            "words_normalized": [
+                911.11
+            ]
+        }
+    },
+    "A2_sentiment_sentece": {
+        "positive": {
+            "percentage": [
+                0.0
+            ],
+            "sentece_normalized": [
+                0.0
+            ]
+        },
+        "negative": {
+            "percentage": [
+                0.5
+            ],
+            "sentece_normalized": [
+                250.0
+            ]
+        },
+        "neutral": {
+            "percentage": [
+                0.5
+            ],
+            "sentece_normalized": [
+                10250.0
+            ]
+        }
+    },
+    "A3_explicit_deression_percentage": [
+        0.0
+    ],
+    "A3_explicit_deression_words_normalized": [
+        0.0
+    ],
+    "A4_absolutist_words_small_percentage": [
+        0.0
+    ],
+    "A4_absolutist_words_small_normalized": [
+        0.0
+    ],
+    "A4_absolutist_words_full_percentage": [
+        0.0
+    ],
+    "A4_absolutist_words_full_normalized": [
+        0.0
+    ],
+    "A5_pastwords_percentage": [
+        0.0222
+    ],
+    "A5_pastwords_normalized": [
+        22.22
+    ],
+    "A611_sentece_length": [
+        11.25
+    ],
+    "A612_sentece_complexity": [
+        1.75
+    ],
+    "A621_Lexical_diversity_persentece": [
+        10.5
+    ],
+    "A622_Lexical_spohistication": [
+        6.25
+    ],
+    "A623_Lexical_density": [
+        55.5556
+    ],
+    "A2_sentiment_words_positive_percentage": [
+        0.0667
+    ],
+    "A2_sentiment_words_positive_words_normalized": [
+        66.67
+    ],
+    "A2_sentiment_words_negative_percentage": [
+        0.0222
+    ],
+    "A2_sentiment_words_negative_words_normalized": [
+        22.22
+    ],
+    "A2_sentiment_words_neutral_percentage": [
+        0.9111
+    ],
+    "A2_sentiment_words_neutral_words_normalized": [
+        911.11
+    ],
+    "A2_sentiment_sentece_positive_percentage": [
+        0.0
+    ],
+    "A2_sentiment_sentece_negative_percentage": [
+        0.5
+    ],
+    "A2_sentiment_sentece_neutral_percentage": [
+        0.5
+    ]
+}

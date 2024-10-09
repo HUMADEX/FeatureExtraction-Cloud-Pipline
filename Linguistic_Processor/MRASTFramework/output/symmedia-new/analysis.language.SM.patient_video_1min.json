@@ -1,0 +1,374 @@
+{
+    "depressed": 0,
+    "words": 88,
+    "sentences": 2,
+    "statements": 1,
+    "clauses": 8,
+    "sentece_length_data": {
+        "avg": 44.0,
+        "median": 44.0,
+        "interquartile": 17.0
+    },
+    "clauses_data": {
+        "avg": 4.0,
+        "median": 4.0,
+        "interquartile": 2.0
+    },
+    "lexsophistication_data": {
+        "avg": 20.5,
+        "median": 20.5,
+        "interquartile": 7.5
+    },
+    "sentece_unique_words_data": {
+        "avg": 38.5,
+        "median": 38.5,
+        "interquartile": 14.5
+    },
+    "unique_words": {
+        "count": 71,
+        "percentage": 0.8068
+    },
+    "language": {
+        "sentiment": {
+            "statement": {
+                "positive": {
+                    "count": 0,
+                    "percentage": 0.0
+                },
+                "negative": {
+                    "count": 1,
+                    "percentage": 1.0
+                },
+                "neutral": {
+                    "count": 0,
+                    "percentage": 0.0
+                }
+            },
+            "sentence": {
+                "positive": {
+                    "count": 0,
+                    "percentage": 0.0
+                },
+                "negative": {
+                    "count": 2,
+                    "percentage": 1.0
+                },
+                "neutral": {
+                    "count": 0,
+                    "percentage": 0.0
+                }
+            },
+            "word": {
+                "positive": {
+                    "count": 2,
+                    "percentage": 0.0227
+                },
+                "negative": {
+                    "count": 4,
+                    "percentage": 0.0455
+                },
+                "neutral": {
+                    "count": 82,
+                    "percentage": 0.9318
+                }
+            }
+        },
+        "clasuses_per_statement": {
+            "avg": [
+                4.0
+            ],
+            "map": [
+                [
+                    2,
+                    6
+                ]
+            ],
+            "median": [
+                4.0
+            ],
+            "interquartile": [
+                2.0
+            ]
+        },
+        "lexialspohistication_per_statement": {
+            "avg": [
+                20.5
+            ],
+            "map": [
+                [
+                    13,
+                    28
+                ]
+            ],
+            "median": [
+                20.5
+            ],
+            "interquartile": [
+                7.5
+            ],
+            "mapdetail": [
+                [
+                    {
+                        "count": 13,
+                        "percent": 0.4815,
+                        "lengths": [
+                            4,
+                            4,
+                            3,
+                            5,
+                            5,
+                            4,
+                            6,
+                            5,
+                            6,
+                            4,
+                            4,
+                            3,
+                            3,
+                            6,
+                            4,
+                            3,
+                            6,
+                            6,
+                            5,
+                            5,
+                            10,
+                            4,
+                            4,
+                            5,
+                            8,
+                            7,
+                            5,
+                            7,
+                            4,
+                            5,
+                            7,
+                            8,
+                            4,
+                            6,
+                            6,
+                            4,
+                            1,
+                            4,
+                            5,
+                            6,
+                            5
+                        ]
+                    },
+                    {
+                        "count": 28,
+                        "percent": 0.459,
+                        "lengths": [
+                            4,
+                            4,
+                            3,
+                            5,
+                            5,
+                            4,
+                            6,
+                            5,
+                            6,
+                            4,
+                            4,
+                            3,
+                            3,
+                            6,
+                            4,
+                            3,
+                            6,
+                            6,
+                            5,
+                            5,
+                            10,
+                            4,
+                            4,
+                            5,
+                            8,
+                            7,
+                            5,
+                            7,
+                            4,
+                            5,
+                            7,
+                            8,
+                            4,
+                            6,
+                            6,
+                            4,
+                            1,
+                            4,
+                            5,
+                            6,
+                            5
+                        ]
+                    }
+                ]
+            ]
+        },
+        "lexial_density_per_sentece": [
+            [
+                {
+                    "wps": 27,
+                    "typesmap": [
+                        "ADV|",
+                        "PART|",
+                        "DET|PronType=Int",
+                        "PRON|Case=Nom|Person=2|PronType=Prs",
+                        "PRON|Case=Acc|Number=Sing|Person=1|PronType=Prs",
+                        "NOUN|Number=Plur",
+                        "VERB|VerbForm=Inf",
+                        "VERB|Mood=Imp|VerbForm=Fin",
+                        "PRON|Person=2|Poss=Yes|PronType=Prs",
+                        "VERB|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin",
+                        "PRON|Number=Sing|Person=1|Poss=Yes|PronType=Prs",
+                        "ADP|",
+                        "NOUN|Number=Sing",
+                        "AUX|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin",
+                        "PROPN|Number=Sing",
+                        "VERB|Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin",
+                        "PRON|PronType=Int",
+                        "DET|Definite=Ind|PronType=Art",
+                        "VERB|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin"
+                    ],
+                    "value": 0.7037,
+                    "text": "Just*tell*me*what*you*come*to*see*me*today*is*a*wound*up*lost*my*temper*what*sorts*of*things*make*you*lose*your*tom*oha*"
+                },
+                {
+                    "wps": 61,
+                    "typesmap": [
+                        "ADV|",
+                        "AUX|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin",
+                        "ADJ|Degree=Pos",
+                        "SCONJ|",
+                        "VERB|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin",
+                        "PRON|Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs",
+                        "PART|",
+                        "PRON|Case=Nom|Number=Sing|Person=1|PronType=Prs",
+                        "INTJ|",
+                        "PRON|Number=Sing|PronType=Dem",
+                        "PRON|Number=Sing|Person=1|Poss=Yes|PronType=Prs",
+                        "VERB|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin",
+                        "AUX|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin",
+                        "DET|Definite=Def|PronType=Art",
+                        "PRON|PronType=Int",
+                        "VERB|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin",
+                        "VERB|VerbForm=Inf",
+                        "ADV|Degree=Pos",
+                        "SCONJ|PronType=Int",
+                        "ADP|",
+                        "NOUN|Number=Sing",
+                        "VERB|Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin",
+                        "CCONJ|",
+                        "DET|Definite=Ind|PronType=Art",
+                        "NOUN|Number=Plur",
+                        "VERB|Tense=Past|VerbForm=Inf",
+                        "PROPN|Number=Sing",
+                        "PRON|Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs",
+                        "VERB|Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin"
+                    ],
+                    "value": 0.4754,
+                    "text": "So*things*the*kids*i*get*on*my*nerves*what*does*that*happen*plain*meade*Teravision*too*loud*and*take*shawn*for*instance*he*spilled*sugar*all*over*the*counter*last*night*when*my*husband*was*out*Ah*that*what*happened*i*lost*my*temper*pushed*him*down*not*hard*he*wasn*t*hurt*just*Cried*a*little*maybe*maybe*white*"
+                }
+            ]
+        ],
+        "lexial_density_per_sentece_nofeats": [
+            [
+                {
+                    "wps": 27,
+                    "typesmap": [
+                        "DET",
+                        "PART",
+                        "ADV",
+                        "PRON",
+                        "PROPN",
+                        "ADP",
+                        "AUX",
+                        "NOUN",
+                        "VERB"
+                    ],
+                    "value": 0.3333
+                },
+                {
+                    "wps": 61,
+                    "typesmap": [
+                        "DET",
+                        "PART",
+                        "ADV",
+                        "CCONJ",
+                        "PRON",
+                        "ADJ",
+                        "PROPN",
+                        "ADP",
+                        "INTJ",
+                        "AUX",
+                        "SCONJ",
+                        "NOUN",
+                        "VERB"
+                    ],
+                    "value": 0.2131
+                }
+            ]
+        ],
+        "sentece_length": {
+            "avg": [
+                44.0
+            ],
+            "map": [
+                [
+                    27,
+                    61
+                ]
+            ],
+            "median": [
+                44.0
+            ],
+            "interquartile": [
+                17.0
+            ]
+        },
+        "sentece_unique_words": {
+            "avg": [
+                38.5
+            ],
+            "map": [
+                [
+                    24,
+                    53
+                ]
+            ],
+            "median": [
+                38.5
+            ],
+            "interquartile": [
+                14.5
+            ]
+        },
+        "pronoun_fps": {
+            "count": 8,
+            "percentage": 0.0909
+        },
+        "absolutist_words_small": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "absolutist_words_full": {
+            "count": 1,
+            "percentage": 0.0114
+        },
+        "depression_specific_words": {
+            "count": 1,
+            "percentage": 0.0114
+        },
+        "pastwords": {
+            "count": 9,
+            "percentage": 0.1023
+        }
+    },
+    "avg_lexdensity_per_specific_POS": 0.4659,
+    "avg_lexdensity_senetece": 0.5896,
+    "avg_lexdensity_senetece_nofeats": 0.2732,
+    "avg_lexdensity_video": 0.4090909090909091,
+    "avg_lexdensity_video_nofeats": 0.14772727272727273,
+    "avg_lexdensity_video_normalized": 0.36,
+    "avg_lexdensity_video_nofeats_normalized": 0.13
+}
