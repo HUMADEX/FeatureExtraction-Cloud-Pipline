@@ -28,6 +28,7 @@ FHIR libraries (if integrating with FHIR)
 Apache Maven 3.9.6
 Java JDK 17.0.12
 
+Please note that AI microservices that are connected in the code like Automatic Speech Recognition (ASR) are configured externally and connected over the outside REST endpoints which should be approprietly configured in the code parts where needed.
 
 Installation
 
