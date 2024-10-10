@@ -49,4 +49,5 @@ Consider adding more specific information about the project's purpose, target au
 If you have any questions or require further assistance, please don't hesitate to contact [email]
 
 Reference
+
 MLAKAR, Izidor, ARIOZ, Umut, SMRKE, Urška, PLOHL, Nejc, ŠAFRAN, Valentino, ROJC, Matej. An end-to-end framework for extracting observable cues of depression from diary recordings. Expert systems with applications. [Online ed.]. Available online 8 August 2024, 125025, 41 str., ilustr. ISSN 1873-6793. DOI: 10.1016/j.eswa.2024.125025.
