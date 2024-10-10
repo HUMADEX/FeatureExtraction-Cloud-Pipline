@@ -1,0 +1,35 @@
+Assign full Resource JSON payload in the right format
+Resource list can be found here: https://www.hl7.org/fhir/stu3/resourcelist.html
+
+JSON Composition Payload Example
+```
+{
+   "id":"UKCMHospDiscTxt.B5PnH4.1",
+   "author":[
+      {
+         
+      }
+   ],
+   "date":"1996-10-07T00:00:00+01:22",
+   "encounter":{
+      "display":"Source: Hospitalization ecounter"
+   },
+   "section":[
+      {
+         "text":{
+            "div":"<div>OB SPREJEMU IZVRŠIMO TOALETO RAN. PREJME PROTITETANUSNO ZAŠČITO ANATE. TH.: KETOCEF, ANALGETIKA, VITAMINI.</div>",
+            "status":"additional"
+         }
+      }
+   ],
+   "status":"final",
+   "subject":{
+      
+   },
+   "title":"anamnesis",
+   "type":{
+      "text":"1:anamnesis"
+   },
+   "resourceType":"Composition"
+}
+```

@@ -1,0 +1,49 @@
+Assign full Questionnare JSON payload
+
+JSON Questionnare Payload Example
+```
+{
+   "url":"Questionnaire/patient_health_questionnaire_two_en",
+   "identifier":"patient_health_questionnaire_two_en",
+   "name":"PHQ2-EN",
+   "title":"Patient health questionnaire 2, PHQ-2",
+   "publisher":"",
+   "description":"The PHQ-2 inquires about the frequency of depressed mood and anhedonia over the past two weeks. The PHQ-2 includes the first two items of the PHQ-9.The purpose of the PHQ-2 is to screen for depression in a first-step approach. Patients who screen positive should be further evaluated with the PHQ-9 to determine whether they meet criteria for a depressive disorder.",
+   "purpose":"Assesing Mental Health",
+   "code":{
+      "code":"55757-9",
+      "display":"Patient Health Questionnaire 2 item (PHQ-2)",
+      "system":"http://www.hl7.org/Special/committees/patientcare"
+   },
+   "item":[
+      {
+         "linkId":"Questionnaire/Item/question1_phq2_en_start",
+         "text":"Over the last 2 weeks, how often have you been bothered by the following problems? \n\nLittle interest or pleasure in doing things.",
+         "options":[
+            "Not at All",
+            "Several days",
+            "More than half the days",
+            "Nearly every day"
+         ],
+         "code":{
+            "code":"44250-9",
+            "system":"https://loinc.org/55757-9/"
+         }
+      },
+      {
+         "linkId":"Questionnaire/Item/question2_phq2_en",
+         "text":"Over the last 2 weeks, how often have you been bothered by the following problems?\n\n Feeling down, depressed or hopeless.",
+         "options":[
+            "Not at All",
+            "Several days",
+            "More than half the days",
+            "Nearly every day"
+         ],
+         "code":{
+            "code":"44250-8",
+            "system":"https://loinc.org/55757-9/"
+         }
+      }
+   ]
+}
+```

@@ -1,0 +1,22 @@
+Assign full Resource JSON payload in the right format
+Resource list can be found here: https://www.hl7.org/fhir/stu3/resourcelist.html
+
+JSON resource payload
+```
+{
+   "id":"UKCMPatient.I2398Zzk1",
+   "birthDate":"1962-01-01T00:00:00",
+   "deceasedBoolean":false,
+   "gender":"male",
+   "maritalStatus":{
+      "coding":[
+         {
+            "code":"UNK",
+            "system":"http://hl7.org/fhir/ValueSet/marital-status"
+         }
+      ],
+      "text":"unknown"
+   },
+   "resourceType":"Patient"
+}
+```

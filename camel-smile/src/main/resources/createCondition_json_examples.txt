@@ -1,0 +1,44 @@
+Assign full Resource JSON payload in the right format
+Resource list can be found here: https://www.hl7.org/fhir/stu3/resourcelist.html
+
+JSON Condition Payload Example
+```
+{
+   "id":"UKCMHospDiag.AGV7o1",
+   "category":[
+      {
+         "coding":[
+            {
+               "code":"encounter-diagnosis",
+               "display":"Encounter Diagnosis",
+               "system":"http://hl7.org/fhir/ValueSet/condition-category"
+            }
+         ],
+         "text":"Inpatient Diagnosis"
+      }
+   ],
+   "clinicalStatus":"active",
+   "code":{
+      "coding":[
+         {
+            "code":"I638",
+            "system":"https://nijz.si/podatki/klasifikacije-in-sifranti"
+         }
+      ],
+      "text":"I638: ICV"
+   },
+   "context":{
+      "id":"UKCMEpisode.PC174901YN5",
+      "reference":"UKCMEpisode.PC174901YN5"
+   },
+   "onsetAge":{
+      "value":62
+   },
+   "onsetDateTime":"2007-09-12T00:00:00+01:22",
+   "subject":{
+      "display":"UKCMPatient.xn775BG3",
+      "reference":"UKCMPatient.xn775BG3"
+   },
+   "resourceType":"Condition"
+}
+```
