@@ -21,7 +21,7 @@ nlp = stanza.Pipeline('en', package='mimic', processors={'ner':'i2b2'})
 #file = glob('/path-to-output-folder-for-files/Linguistic_Processor/MRASTFramework/input/transcriptions-SM-1/*.csv')[0]
 
 #Stanza_doc_open = open(file, 'r').read()
-#doc_file = nlp(Stanza_doc_open)
+#doc_file = nlp(Stanza_doc_open) ####
 
 doc_file = nlp(asr_text_result)
 
