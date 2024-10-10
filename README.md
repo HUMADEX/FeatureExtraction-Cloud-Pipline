@@ -1,5 +1,7 @@
 Diary Video Feature Extraction Framework
 
+![framework pipeline](https://github.com/HUMADEX/FeatureExtraction-Cloud-Pipline/blob/main/docs/Feature_Extraction_Pipeline.jpg)
+
 Overview
 
 This repository contains a Python-based framework designed to extract various features from diary video recordings, including linguistic, symptom, facial, and speech features. These features are stored in JSON format for further analysis or integration with other systems, potentially using FHIR standards for healthcare data exchange.
