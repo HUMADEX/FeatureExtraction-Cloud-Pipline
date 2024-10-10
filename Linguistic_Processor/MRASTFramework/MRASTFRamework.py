@@ -43,22 +43,22 @@ PATH_TRANSCRIPTIONS = "input/transcriptions-DAIC/"
 """
 ########SYMPTOMMEDIA CONFIG############################################
 LANGUAGE_ANALYSIS_OUTPUT_FILE = 'data.language.SM.details.json';
-LANGUAGE_ANALYSIS_OUTPUT_PATH ="/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Linguistic_Processor/MRASTFramework/summary-new/";
+LANGUAGE_ANALYSIS_OUTPUT_PATH ="/path-to-output-folder-for-files/Linguistic_Processor/MRASTFramework/summary-new/";
 LANGUAGE_ANALYSIS_SUMMARY_FILE = 'data.language.SM.summary.json';
 
 #LANGUAGE_ANALYSIS_SUMMARYCS_FILE = 'data.language.SM.CS.json';
 LANGUAGE_ANALYSIS_SUMMARYCS_FILE = video_name+'_linguistic.json';
 LANGUAGE_ANALYSIS_SUMMARY_CSV_FILE = 'data.language.SM.summary.csv';
 
-LANGUAGE_ANALYSIS_SUMMARY_PATH ="/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Linguistic_Processor/MRASTFramework/summary-new/";
+LANGUAGE_ANALYSIS_SUMMARY_PATH ="/path-to-output-folder-for-files/Linguistic_Processor/MRASTFramework/summary-new/";
 LANGUAGE_ANALYSIS_OVERALL_FILE = 'data.language.SM.overall.json';
-LANGUAGE_ANALYSIS_OVERALL_PATH ="/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Linguistic_Processor/MRASTFramework/summary-new/";
+LANGUAGE_ANALYSIS_OVERALL_PATH ="/path-to-output-folder-for-files/Linguistic_Processor/MRASTFramework/summary-new/";
 INDIVIDUAL_ANALYSIS_FILE = "analysis.language.SM.%s.json"
-INDIVIDUAL_ANALYSIS_PATH = "/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Linguistic_Processor/MRASTFramework/output/symmedia-new/"
+INDIVIDUAL_ANALYSIS_PATH = "/path-to-output-folder-for-files/Linguistic_Processor/MRASTFramework/output/symmedia-new/"
 
 # Commented for reading from text instead of csv file
 
-#PATH_TRANSCRIPTIONS = "/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Linguistic_Processor/MRASTFramework/input/transcriptions-SM-1/"
+#PATH_TRANSCRIPTIONS = "/path-to-output-folder-for-files/Linguistic_Processor/MRASTFramework/input/transcriptions-SM-1/"
 #DO NOT FORGET TO UPDATE MAP_DEPRESSED in LanguageProcessor
 
 #def ProcessLanguageRawfromTranscriptions(pathanalysisdetailes = INDIVIDUAL_ANALYSIS_PATH, analysisfiles=INDIVIDUAL_ANALYSIS_FILE,  source_transcriptions = PATH_TRANSCRIPTIONS, detailanalysis_path= LANGUAGE_ANALYSIS_OUTPUT_PATH , detailanalysis_file = LANGUAGE_ANALYSIS_OUTPUT_FILE):

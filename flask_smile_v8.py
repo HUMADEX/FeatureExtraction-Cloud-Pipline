@@ -15,19 +15,17 @@ import subprocess
 import numpy as np
 import pandas as pd
 import cv2
-#print("cv2.getBuildInformation(): "+cv2.getBuildInformation())
 import face_recognition
 import moviepy as mp
 import moviepy.editor as moviepy
 from moviepy.video.io.VideoFileClip import VideoFileClip
 
-#os.environ["COMET_DISABLE_AUTO_LOGGING"] = "1"
 from comet_ml import Experiment
 
 import multiprocessing
 
 # Create an experiment with your api key:
-experiment = Experiment(api_key="rWAcgkIt0KGHoKdOjoNFYqBTD")
+experiment = Experiment(api_key="xxx")
 
 
 app = Flask(__name__)
@@ -57,7 +55,7 @@ class MRASTCheck(Resource):
         print("mrast check asr_text_result", asr_text_result)
 
         # Create the full path for the new folder
-        output_path = os.path.join('/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/', video_name)
+        output_path = os.path.join('/path-to-output-folder/', video_name)
         print("output_path: "+output_path)
         
         # Create the new folder
@@ -92,9 +90,7 @@ class MRASTCheck(Resource):
         # The model has an accuracy of 99.38% on the Labeled Faces in the Wild benchmark.
         # https://face-recognition.readthedocs.io/en/latest/index.html          
                 
-        # Convert .wmv video to .mp4 using ffmpeg
-        #os.system('ffmpeg -i /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/'+video_name+'.wmv -c:v libx264 -crf 23 -c:a aac -q:a 100 -y /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/'+video_name+'.mp4')
-        
+               
         cap = cv2.VideoCapture(output_path+'/'+video_name+'.mov')
         controlling_duration = 10  # The duration in seconds to check for a face
         frames_processed = 0  # Track the number of frames processed
@@ -171,7 +167,7 @@ class Features(Resource):
         print("ASR Text Result:", asr_text_result)
 
         # Create the full path for the new folder
-        output_path = os.path.join('/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/', video_name)
+        output_path = os.path.join('/path-to-output-folder/', video_name)
         print("output_path: "+output_path)
 
         # Create the new folder
@@ -182,7 +178,7 @@ class Features(Resource):
             zip_ref.extractall(path=output_path)
 
 
-        results_output_path = os.path.join('/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Features/', video_name)
+        results_output_path = os.path.join('/path-to-output-folder-for-features/', video_name)
         print("results_output_path: "+results_output_path)
 
         # Create the new folder
@@ -228,10 +224,10 @@ class Features(Resource):
 
         '''# Define the commands to run
         commands = [
-            'python /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/MRAST_Observable_Cues_Speech4.py "{}"'.format(fn),
-            'python /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/MRAST_Observable_Cues_Visual4.py "{}"'.format(fn),
-            'python /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Linguistic_Processor/MRASTFramework/MRASTFRamework.py "{}" "{}"'.format(fn, asr_text_result),
-            'python /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_NER/stanza_en_symptoms.py "{}" "{}"'.format(fn, asr_text_result)
+            'python /your-path/MRAST_Observable_Cues_Speech4.py "{}"'.format(fn),
+            'python /your-path/MRAST_Observable_Cues_Visual4.py "{}"'.format(fn),
+            'python /your-path/Linguistic_Processor/MRASTFramework/MRASTFRamework.py "{}" "{}"'.format(fn, asr_text_result),
+            'python /your-path/stanza_en_symptoms.py "{}" "{}"'.format(fn, asr_text_result)
         ]
 
         # Run the commands in parallel
@@ -242,10 +238,10 @@ class Features(Resource):
             process.wait()
         '''
         # Define the commands to run
-        command1 = 'python /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/MRAST_Observable_Cues_Speech4.py "{}"'.format(fn)
-        command2 = 'python /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/MRAST_Observable_Cues_Visual4.py "{}"'.format(fn)
-        command3 = 'python /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Linguistic_Processor/MRASTFramework/MRASTFRamework.py "{}" "{}"'.format(fn, asr_text_result)
-        command4 = 'python /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_NER/stanza_en_symptoms.py "{}" "{}"'.format(fn, asr_text_result)
+        command1 = 'python /your-path/MRAST_Observable_Cues_Speech4.py "{}"'.format(fn)
+        command2 = 'python /your-path/MRAST_Observable_Cues_Visual4.py "{}"'.format(fn)
+        command3 = '/your-path/Linguistic_Processor/MRASTFramework/MRASTFRamework.py "{}" "{}"'.format(fn, asr_text_result)
+        command4 = 'python /your-path/stanza_en_symptoms.py "{}" "{}"'.format(fn, asr_text_result)
 
         # Run the first command
         process1 = subprocess.Popen(command1, shell=True)
@@ -265,7 +261,7 @@ class Features(Resource):
         process3.wait()
         process4.wait()
 
-        os.system('cp /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Linguistic_Processor/MRASTFramework/summary-new/'+video_name+'_linguistic.json /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Features/'+video_name)
+        os.system('cp /your-path/Linguistic_Processor/MRASTFramework/summary-new/'+video_name+'_linguistic.json /path-to-output-folder-for-features/'+video_name)
 
         start_time_files = time.time()
         directory = results_output_path
@@ -275,10 +271,8 @@ class Features(Resource):
                 for filename in filenames:
                     file_path = os.path.join(foldername, filename)
                     zip_file.write(file_path, os.path.relpath(file_path, directory))
-
-        #with open('/Dockers/Datasets/libraries/E2E_Pipeline/json_files/json_files.zip', 'rb') as f:
-        #    data = f.read()
-        with open('/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/'+zip_name, 'rb') as f:
+        
+        with open('/path-to-output-folder-for-files/'+zip_name, 'rb') as f:
             data = f.read()
         end_time = time.time()
         duration = end_time - start_time_files

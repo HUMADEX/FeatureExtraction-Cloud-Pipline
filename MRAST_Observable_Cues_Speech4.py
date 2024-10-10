@@ -71,13 +71,13 @@ video_name = video_name.split(".")[0]  # Split by "." and take the first part
 
 print('video_name:',video_name)
 
-results_output_path = os.path.join('/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/', video_name)
+results_output_path = os.path.join('/path-to-output-folder-for-files/Output_Docs/', video_name)
 print("results_output_path: "+results_output_path)
             
 # Create the new folder
 os.makedirs(results_output_path, exist_ok=True)
 
-results_output_path2 = os.path.join('/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/processed/', video_name)
+results_output_path2 = os.path.join('/path-to-output-folder-for-files/Output_Docs/processed/', video_name)
 print("processed_results_output_path: "+results_output_path2)
             
 # Create the new folder
@@ -147,8 +147,8 @@ def get_video_duration(filename):
 start_time_ffmpeg = time.time()
 print("Starting splitting video")
 
-filename_root = f"/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/{video_name}/"
-filename_root_output = f"/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/{video_name}/"
+filename_root = f"/path-to-output-folder-for-files/{video_name}/"
+filename_root_output = f"/path-to-output-folder-for-files/Output_Docs/{video_name}/"
 filename = f'{filename_root}{video_name}.mov'
 
 # Get video duration
@@ -180,7 +180,7 @@ def run_praat_file(m, p):
     returns : objects outputed by the praat script
     """
     sound=p+m+".wav"
-    sourcerun='/Dockers/Datasets/libraries/E2E_Pipeline/myprosody/myprosody/myprosody/dataset/essen/myspsolution.praat'
+    sourcerun='/path-to-myprosody/dataset/essen/myspsolution.praat'
     path=p
 
     #assert os.path.isfile(sound), "Wrong path to audio file"
@@ -419,8 +419,8 @@ import moviepy.editor as mp
 #print('Audio files is extracting from video files.')
 
 for i in range(num_subvideos):
-    my_clip = mp.VideoFileClip(r"/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/{}/{}_video_{}.mov".format(video_name,video_name,(i+1)))
-    my_clip.audio.write_audiofile(r"/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/{}/{}_audio_{}.wav".format(video_name,video_name,(i+1)))
+    my_clip = mp.VideoFileClip(r"/path-to-output-folder-for-files/Output_Docs/{}/{}_video_{}.mov".format(video_name,video_name,(i+1)))
+    my_clip.audio.write_audiofile(r"/path-to-output-folder-for-files/Output_Docs/{}/{}_audio_{}.wav".format(video_name,video_name,(i+1)))
 
 after_audio = time.time()
 audio_time = after_audio - before_audio
@@ -654,7 +654,7 @@ def feature_calculation(csv_file_path):
                  [float("{0:.2f}".format(100-(100*total_bs)))]],columns=['Speech'])
 
 # Save results to a separate CSV file   
-    output_file = f"/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/{video_name}/output_{os.path.splitext(csv_file_path.split('/')[-1])[0]}.csv"
+    output_file = f"/path-to-output-folder-for-files/Output_Docs/{video_name}/output_{os.path.splitext(csv_file_path.split('/')[-1])[0]}.csv"
     
     df1.to_csv(output_file, index=False)
 
@@ -666,7 +666,7 @@ def process_files_in_parallel(file_paths):
         pool.map(feature_calculation, file_paths)
 
 #file_paths = ["file1.csv", "file2.csv", "file3.csv"]  # Replace with your list of files
-file_paths = [    f"/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/{video_name}/{video_name}_audio_{i+1}.wav"
+file_paths = [    f"/path-to-output-folder-for-files/Output_Docs/{video_name}/{video_name}_audio_{i+1}.wav"
     for i in range(num_subvideos)
 ]
 
@@ -697,7 +697,7 @@ def calculate_row_stats(file_pattern):
 
   return result
 
-file_pattern = '/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/'+video_name+'/output_'+video_name+'_audio_*.csv'  # Replace with your actual file pattern
+file_pattern = '/path-to-output-folder-for-files/Output_Docs/'+video_name+'/output_'+video_name+'_audio_*.csv'  # Replace with your actual file pattern
 #print("file_pattern: "+str(file_pattern))
 result = calculate_row_stats(file_pattern)
 
@@ -734,7 +734,7 @@ result_last = pd.DataFrame({'Speech': [result[f'Speech_{i+1}'] for i in range(26
  
 #print(result_last)
 
-output_file = "/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Features/{}/{}_speech.json".format(video_name,video_name)
+output_file = "/path-to-output-folder-for-files/Output_Features/{}/{}_speech.json".format(video_name,video_name)
 
 result_last.to_json(output_file)
 

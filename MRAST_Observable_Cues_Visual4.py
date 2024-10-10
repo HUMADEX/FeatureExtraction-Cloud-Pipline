@@ -66,22 +66,22 @@ video_name = video_name.split(".")[0]  # Split by "." and take the first part
 
 print('video_name:',video_name)
 
-results_output_path = os.path.join('/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/', video_name)
+results_output_path = os.path.join('/path-to-output-folder-for-files/Output_Docs/', video_name)
 print("results_output_path: "+results_output_path)
             
 # Create the new folder
 os.makedirs(results_output_path, exist_ok=True)
 
-results_output_path2 = os.path.join('/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/processed/', video_name)
+results_output_path2 = os.path.join('/path-to-output-folder-for-files/Output_Docs/processed/', video_name)
 print("processed_results_output_path: "+results_output_path2)
             
 # Create the new folder
 os.makedirs(results_output_path2, exist_ok=True)
 
 
-filename_root="/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/"+video_name+"/"
-filename_root_output="/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/"+video_name+"/"
-filename = '/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/{}/{}.mov'.format(video_name,video_name)
+filename_root="/path-to-output-folder-for-files/"+video_name+"/"
+filename_root_output="/path-to-output-folder-for-files/Output_Docs/"+video_name+"/"
+filename = '/path-to-output-folder-for-files/{}/{}.mov'.format(video_name,video_name)
 
 #***********Splitting Video into sub-videos*********
 
@@ -253,17 +253,12 @@ print(num_subvideos)
 
 def process_subvideo(filename):
     print('process_subvideo: started')
-    command = f"/Dockers/Datasets/libraries/Pipeline/OpenFace/build/bin/FeatureExtraction -f {filename} -2Dfp -aus -pose -gaze -out_dir /Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/processed/"+video_name+"/"
+    command = f"/path-to-OpenFace/build/bin/FeatureExtraction -f {filename} -2Dfp -aus -pose -gaze -out_dir /path-to-output-folder-for-files/Output_Docs/processed/"+video_name+"/"
     print('command:',command)
     os.system(command)
 
-#def merge_csv_files(output_dir):
-#    csv_files = [os.path.join(output_dir, f) for f in os.listdir(output_dir) if f.endswith('.csv')]
-#    df = pd.concat([pd.read_csv(f) for f in csv_files])
-#    df.to_csv("/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/processed/"+video_name+"/"+video_name+"_output.csv", index=False)
-
 subvideo_filenames = [
-    f"/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/{video_name}/{video_name}_video_{i+1}.mov"
+    f"/path-to-output-folder-for-files/Output_Docs/{video_name}/{video_name}_video_{i+1}.mov"
     for i in range(num_subvideos)
 ]
 
@@ -274,7 +269,7 @@ processes=os.cpu_count()
 with multiprocessing.Pool(processes) as pool:
     output_files = pool.map(process_subvideo, subvideo_filenames)
 
-    #merge_csv_files("/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/processed/{}".format(video_name))
+    #merge_csv_files("/path-to-output-folder-for-files/Output_Docs/processed/{}".format(video_name))
 
 
 print("Openface processing is ended in %s seconds ---" % (time.time() - start_time_visual))  
@@ -1212,7 +1207,7 @@ def feature_calculation(csv_file_path):
              [float("{0:.2f}".format(sum(A8_smiling_Frames_Percentage)))]],columns=['Visual'])
     
     # Save results to a separate CSV file
-    output_file = f"/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/processed/{video_name}/output_{csv_file_path.split('/')[-1]}"  # Adjust output file naming as needed
+    output_file = f"/path-to-output-folder-for-files/Output_Docs/processed/{video_name}/output_{csv_file_path.split('/')[-1]}"  # Adjust output file naming as needed
     df2.to_csv(output_file, index=False)
 
 def process_files_in_parallel(file_paths):
@@ -1222,7 +1217,7 @@ def process_files_in_parallel(file_paths):
 #file_paths = ["file1.csv", "file2.csv", "file3.csv"]  # Replace with your list of files
 
 file_paths = [
-    f"/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/processed/{video_name}/{video_name}_video_{i+1}.csv"
+    f"/path-to-output-folder-for-files/Output_Docs/processed/{video_name}/{video_name}_video_{i+1}.csv"
     for i in range(num_subvideos)
 ]
 process_files_in_parallel(file_paths)
@@ -1250,7 +1245,7 @@ def calculate_row_stats(file_pattern):
 
   return result
 
-file_pattern = '/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Docs/processed/'+video_name+'/output_'+video_name+'_video_*.csv'  # Replace with your actual file pattern
+file_pattern = '/path-to-output-folder-for-files/Output_Docs/processed/'+video_name+'/output_'+video_name+'_video_*.csv'  # Replace with your actual file pattern
 print("file_pattern: "+str(file_pattern))
 result = calculate_row_stats(file_pattern)
 
@@ -1297,7 +1292,7 @@ result_last = pd.DataFrame({'Visual': [result[f'Visual_{i+1}'] for i in range(36
  
 #print(result_last)
 
-output_file = "/Dockers/Datasets/libraries/E2E_Pipeline/SMILE_project/SMILE_Observable_Cues/Output_Features/{}/{}_visual.json".format(video_name,video_name)
+output_file = "/path-to-output-folder-for-files/Output_Features/{}/{}_visual.json".format(video_name,video_name)
 result_last.to_json(output_file)
 
 print("---Facial Feature Extraction is ended in %s seconds ---" % (time.time() - start_time_visual))
