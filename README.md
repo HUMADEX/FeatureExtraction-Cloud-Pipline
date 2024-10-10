@@ -27,19 +27,27 @@ Installation
 1. Clone this repository
 2. Install required libraries:
 3. Usage
-    Prepare your diary videos.
-    Run the main script (flask_smile_v8.py).
-    The extracted features will be stored in the specified output directory.
- Contributing
+
+   3.1. Prepare your diary videos.
+
+   3.2. Run the main script (flask_smile_v8.py).
+
+   3.3. The extracted features will be stored in the specified output directory.
+ 
+Contributing
 
 Contributions are welcome! Please feel free to fork the repository and submit pull requests.
 
 License
 
-This project is licensed under the MIT License.   
+This project is licensed under the CC-BY License.   
 
 Additional Notes
 
 For more detailed usage instructions and customization options, refer to the documentation within the repository.
 Consider adding more specific information about the project's purpose, target audience, and potential applications.
 If you have any questions or require further assistance, please don't hesitate to contact [email]
+
+Reference
+
+MLAKAR, Izidor, ARIOZ, Umut, SMRKE, Urška, PLOHL, Nejc, ŠAFRAN, Valentino, ROJC, Matej. An end-to-end framework for extracting observable cues of depression from diary recordings. Expert systems with applications. [Online ed.]. Available online 8 August 2024, 125025, 41 str., ilustr. ISSN 1873-6793. DOI: 10.1016/j.eswa.2024.125025.
