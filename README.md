@@ -30,7 +30,7 @@ FHIR libraries (if integrating with FHIR)
 Apache Maven 3.9.6
 Java JDK 17.0.12
 
-Please note that AI microservices that are connected in the code like Automatic Speech Recognition (ASR) are configured externally and connected over the outside REST endpoints which should be approprietly configured in the code parts where needed.
+Please note that AI microservices that are connected in the code like Automatic Speech Recognition (ASR), Named Entity Recognition (NER) and FHIR server are configured externally and connected over the outside REST endpoints which should be approprietly configured in the code parts where needed.
 
 Installation
 
@@ -46,7 +46,9 @@ Installation
    
    3.4. Select video and start processing.
 
-   3.. The extracted features will be stored in the specified output directory.
+   3.5. The extracted features will be stored in the specified output directory.
+
+   3.6. All extracted results are on the end stored on a FHIR server as Composition resources.
  
 Contributing
 
