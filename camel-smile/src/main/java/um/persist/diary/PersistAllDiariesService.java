@@ -60,7 +60,7 @@ public class PersistAllDiariesService {
     public String PERSISTOHCLogin() throws Exception {
         Unirest.setTimeouts(0, 0);
         HttpResponse<String> response = Unirest
-                .post("https://domain.com/auth/realms/persist/protocol/openid-connect/token")
+                .post("https://domain.com/auth/realms/project/protocol/openid-connect/token")
                 .header("Content-Type", "application/x-www-form-urlencoded")
                 .field("grant_type", "password")
                 .field("username", "username")
@@ -101,17 +101,7 @@ public class PersistAllDiariesService {
                 Object.class); // TODO: SWAGER does not show us what is the structure of response
 
 
-        /*
-         * try {
-         * Files.write(Paths.get("/home/matejr/camel/depression.mp4"),
-         * response2.getBody());
-         * } catch (IOException e) {
-         * // TODO Auto-generated catch block
-         * e.printStackTrace();
-         * }
-         */
-
-        // return response2;
+       
     }
 
     private void DownloadVideo(String video_id) {
@@ -139,17 +129,7 @@ public class PersistAllDiariesService {
         }else{
             System.out.println(++count1 + " diary video failed with ID: " + video_id);
         }
-        /*
-         * try {
-         * Files.write(Paths.get("/home/matejr/camel/depression.mp4"),
-         * response2.getBody());
-         * } catch (IOException e) {
-         * // TODO Auto-generated catch block
-         * e.printStackTrace();
-         * }
-         */
-
-        // return response2;
+     
     }
 
     public void DownloadAllVideos(Exchange exchange) {
