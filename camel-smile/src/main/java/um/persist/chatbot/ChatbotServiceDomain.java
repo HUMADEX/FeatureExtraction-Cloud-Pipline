@@ -64,7 +64,7 @@ public class ChatbotServiceDomain {
 
             RestTemplate restTemplate = new RestTemplate();
             String authUri = "http://0.0.0.0:5005/domain"; // uri to service which you get the token from // USE THIS ONE IN PRODUCTION
-			//String authUri = "http://164.8.66.117:5005/domain";
+			//String authUri = "http://0.0.0.0:5005/domain";
             ResponseEntity<Object> response =
                     restTemplate.exchange(authUri, HttpMethod.GET, entity, Object.class);
 
