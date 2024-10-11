@@ -63,7 +63,7 @@ import com.google.common.reflect.TypeToken;
 public class PersistProcessAllDiariesService {
 
     //public String OHC_endpoint_diary = "https://domain.com/internal-fhir/persist/DiagnosticReport?code=diary";
-    public String OHC_endpoint_diary = "https://domain.com/internal-fhir/persist/DiagnosticReport?code=diary&_count=10000";
+    public String OHC_endpoint_diary = "https://domain.com/internal-fhir/project/DiagnosticReport?code=diary&_count=10000";
     ResponseEntity<Object> response2;
     ResponseEntity<byte[]> response3;
     String reference_patient = null;
@@ -85,7 +85,7 @@ public class PersistProcessAllDiariesService {
     public String PERSISTOHCLogin() throws Exception {
         Unirest.setTimeouts(0, 0);
         HttpResponse<String> response = Unirest
-                .post("https://domain.com/auth/realms/persist/protocol/openid-connect/token")
+                .post("https://domain.com/auth/realms/project/protocol/openid-connect/token")
                 .header("Content-Type", "application/x-www-form-urlencoded")
                 .field("grant_type", "password")
                 .field("username", "username")
@@ -177,10 +177,7 @@ public class PersistProcessAllDiariesService {
 
         // SENDING FILE TO REST API ENDPOINT
         MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
-        // File file_to_send = new
-        // File("/home/matejr/camel/patient_videos/"+video_id+".mp4");
-        // File file = new File("/home/matejr/camel/patient_videos/"+video_id+".mp4");
-        // System.out.println(video_id);
+       
         byte[] bytes;
         try {
             bytes = Files.readAllBytes(Paths.get("/home/user/camel/patient_videos/" + video_id + ".mp4"));
@@ -243,17 +240,7 @@ public class PersistProcessAllDiariesService {
             System.out.println(++count1 + " diary video processing failed with ID: " + video_id);
         }
 
-        /*
-         * try {
-         * Files.write(Paths.get("/home/matejr/camel/patient_videos/"+video_id+".mp4"),
-         * response2.getBody());
-         * } catch (IOException e) {
-         * // TODO Auto-generated catch block
-         * e.printStackTrace();
-         * }
-         */
-
-        // return response2;
+        
     }
 
     public void ProcessAllVideos(Exchange exchange) {
