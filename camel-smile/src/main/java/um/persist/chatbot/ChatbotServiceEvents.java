@@ -66,7 +66,7 @@ public class ChatbotServiceEvents {
 
             RestTemplate restTemplate = new RestTemplate();
             String authUri = "http://0.0.0.0:"+port+"/conversations/"+user_id+"/tracker/events"; // uri to service which you get the token from // USE THIS ONE IN PRODUCTION
-			//String authUri = "http://164.8.66.117:5005/conversations/"+user_id+"/tracker/events";
+			//String authUri = "http://0.0.0.0:5005/conversations/"+user_id+"/tracker/events";
             ResponseEntity<Object> response =
                     restTemplate.exchange(authUri, HttpMethod.POST, entity, Object.class);
 
