@@ -452,7 +452,7 @@ public class ChatbotServiceWebhook implements FinalVariables {
                 }
                 // String authUri = "http://x.x.x.x:5005/webhooks/rest/webhook"; // uri to
                 // service which you get the token from // USE THIS ONE IN PRODUCTION
-                // String authUri = "http://164.8.66.117:5005/webhooks/rest/webhook";
+                // String authUri = "http://0.0.0.0:5005/webhooks/rest/webhook";
                 ResponseEntity<Object> response = restTemplate.exchange(authUri, HttpMethod.POST, entity, Object.class);
 
                 // System.out.println("Create Resource: " + response2);
