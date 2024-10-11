@@ -340,7 +340,7 @@ public class ChatbotServiceTracker {
                                                                                                        // ONE IN
                                                                                                        // PRODUCTION
             // String authUri =
-            // "http://164.8.66.117:5005/conversations/"+user_id+"/tracker";
+            // "http://0.0.0.0:5005/conversations/"+user_id+"/tracker";
             ResponseEntity<Object> response = restTemplate.exchange(authUri, HttpMethod.GET, entity, Object.class);
 
             // System.out.println("Create Resource: " + response2);
