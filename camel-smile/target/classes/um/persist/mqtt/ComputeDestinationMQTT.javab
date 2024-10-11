@@ -1,0 +1,129 @@
+package um.persist.mqtt;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
+import org.json.JSONObject;
+import um.persist.*;
+
+import org.springframework.stereotype.Service;
+import org.apache.camel.Exchange;
+import org.apache.camel.Message;
+
+import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.time.ZoneId;
+import java.util.Collection;
+import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Random;
+import java.util.TreeMap;
+
+/**
+ *
+ * @author UM FERI
+ * @date JAN 2021
+ * @description Class for receiving Json from Swagger REST API and sending to MQTT broker
+ *
+ */
+
+@Service("computeDestinationMQTT")
+
+public class ComputeDestinationMQTT {
+    public ComputeDestinationMQTT() {
+
+    }
+	
+
+
+    public void setJmsHeader(Exchange exchange) {
+
+        String mqtt_topic = "Error. No topic.";
+        String client_id = "Error. No client id.";
+        String mqtt_message;
+        Message camelMessage = exchange.getIn();
+		Map<String, Object> val = new LinkedHashMap<>();
+
+        Map<String, Object> payload = (Map<String, Object>) camelMessage.getBody();
+                /*if (payload.containsKey("topic")) {
+                    mqtt_topic = (String) payload.get("topic");
+                }*/
+		if (!payload.containsKey("message")) {
+            val.put("error", "message not provided, add it");
+        }
+		if (!payload.containsKey("user_id")) {
+            val.put("error", "user_id not provided, add it");
+        }
+        if (payload.containsKey("message")) {
+            mqtt_message = (String) payload.get("message");
+        }
+		if (payload.containsKey("user_id")) {
+            client_id = (String) payload.get("user_id");
+        }
+		
+		ObjectMapper objectMapper = new ObjectMapper();
+		String json = "No json data. Invalid input.";
+
+        try {
+            json = objectMapper.writeValueAsString(payload);
+            System.out.println(json);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+        mqtt_message = camelMessage.getBody(String.class);
+        mqtt_topic = (String) camelMessage.getHeader("topic");
+        System.out.println("Camel got next topic from REST API: " + mqtt_topic);
+
+
+		if (payload.containsKey("user_id") && payload.containsKey("message")){
+        String topic = mqtt_topic;
+        int qos = 0;
+        String broker = "tcp://x.x.x.x:8883";
+        String clientId = client_id;
+        MemoryPersistence persistence = new MemoryPersistence();
+
+        try {
+            MqttClient sampleClient = new MqttClient(broker, clientId, persistence);
+            MqttConnectOptions connOpts = new MqttConnectOptions();
+            connOpts.setCleanSession(true);
+            System.out.println("Connecting to broker: " + broker);
+            sampleClient.connect(connOpts);
+            System.out.println("Connected");
+            System.out.println("Publishing message: " + mqtt_message);
+            MqttMessage message = new MqttMessage(json.getBytes());
+            message.setQos(qos);
+            sampleClient.publish(topic, message);
+            System.out.println("Message published");
+            sampleClient.disconnect();
+            System.out.println("Disconnected");
+			
+			val.put("info", "message sent");
+			val.put("topic", mqtt_topic);
+			val.put("body", payload);
+        } catch (MqttException me) {
+            System.out.println("reason " + me.getReasonCode());
+            System.out.println("msg " + me.getMessage());
+            System.out.println("loc " + me.getLocalizedMessage());
+            System.out.println("cause " + me.getCause());
+            System.out.println("excep " + me);
+            me.printStackTrace();
+			
+			val.put("error", "message not sent, invalid mqtt connection");
+        }
+		}else{
+			val.put("error", "check that json contains message and user_id");
+		}
+
+        exchange.getOut().setBody(val);
+    }
+
+}

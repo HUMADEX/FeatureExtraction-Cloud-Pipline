@@ -1,0 +1,38 @@
+Assign full Resource JSON payload in the right format
+Resource list can be found here: https://www.hl7.org/fhir/stu3/resourcelist.html
+
+JSON Observation Payload Example
+```
+{
+   "id":"UKCMHospLaboratory.x8t2.3646.0",
+   "category":[
+      {
+         "coding":[
+            {
+               "code":"laboratory",
+               "display":"Laboratory",
+               "system":"http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code":{
+      "coding":[
+         {
+            "code":"321550",
+            "display":"S-kloridi (Cl)",
+            "system":"http://hl7.org/fhir/observation-category"
+         }
+      ]
+   },
+   "comment":"",
+   "effectiveDateTime":"2007-08-28T08:31:57+01:22",
+   "status":"final",
+   "subject":{
+      "display":"UKCMPatient.xn775BG3",
+      "reference":"UKCMPatient.xn775BG3"
+   },
+   "valueString":"105",
+   "resourceType":"Observation"
+}
+```

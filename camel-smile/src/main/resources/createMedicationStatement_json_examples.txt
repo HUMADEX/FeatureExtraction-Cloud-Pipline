@@ -1,0 +1,39 @@
+Assign full Resource JSON payload in the right format
+Resource list can be found here: https://www.hl7.org/fhir/stu3/resourcelist.html
+
+JSON Medication Statement Payload Example
+```
+{
+   "id":"UKCMHospitlaMedicationStament.hVu23XcH4.1",
+   "category":{
+      "coding":[
+         {
+            "code":"inpatient",
+            "display":"Inpatient",
+            "system":"http://hl7.org/fhir/ValueSet/medication-statement-category"
+         }
+      ]
+   },
+   "dosage":[
+      {
+         "doseQuantity":{
+            "value":2.0
+         },
+         "text":"quantity: 2,0000; dosed qty: 2,00"
+      }
+   ],
+   "effectivePeriod":{
+      "end":"2011-02-28T12:00:00+01:22",
+      "start":"2011-02-28T12:00:00+01:22"
+   },
+   "medicationCodeableConcept":{
+      "text":"DAFILON 4/0;45CM,24MM KOŽ C0932345 A\"36"
+   },
+   "status":"completed",
+   "subject":{
+      
+   },
+   "taken":"y",
+   "resourceType":"MedicationStatement"
+}
+```

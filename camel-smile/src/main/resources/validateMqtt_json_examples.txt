@@ -1,0 +1,9 @@
+Assign desired body with user_id amd user_token
+
+JSON MQTT Validation Example
+```
+{
+   "user_id":"user123",
+   "user_token":"Pg6b5frUGFpWzEXgMFD53EnFihsdlBC9PpS3zGLKeq"
+}
+```

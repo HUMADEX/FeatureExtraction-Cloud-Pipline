@@ -1,0 +1,40 @@
+Assign full Resource JSON payload in the right format
+Resource list can be found here: https://www.hl7.org/fhir/stu3/resourcelist.html
+
+JSON Procedure Payload Example
+```
+{
+   "id":"UKCMOtherProc.nHS7VmN1.0",
+   "category":{
+      "coding":[
+         {
+            "code":"103693007",
+            "display":"Diagnostic procedure",
+            "system":"http://www.hl7.org/fhir/stu3/valueset-procedure-category.html"
+         }
+      ]
+   },
+   "code":{
+      "coding":[
+         {
+            "code":"92184-00",
+            "display":"injekcija ali infuzija elektrolitov",
+            "system":"https://nijz.si/podatki/klasifikacije-in-sifranti"
+         }
+      ],
+      "text":"injekcija ali infuzija elektrolitov"
+   },
+   "context":{
+      "id":"UKCMEpisode.PC174901YN5",
+      "display":"Part of: Hospitalization Episode",
+      "reference":"UKCMEpisode.PC174901YN5"
+   },
+   "performedDateTime":"2007-08-27T13:28:41+01:22",
+   "status":"completed",
+   "subject":{
+      "display":"UKCMPatient.xn775BG3",
+      "reference":"UKCMPatient.xn775BG3"
+   },
+   "resourceType":"Procedure"
+}
+```

@@ -1,0 +1,92 @@
+Assign desired body with patient_id, type, data, language and message
+
+JSON Request Symptoma Questionnaire Example
+```
+{
+   "clinician_id":"",
+   "patient_id":"user123",
+   "hospital_id":"",
+   "type":"request_questionnaire",
+   "data":{
+      "questionnaire_id":"symptoma",
+      "careplan_id":"t123",
+      "age":"44",
+      "query":"Headache",
+      "sex":"UNKNOWN"
+   },
+   "language":"",
+   "message":""
+}
+```
+JSON Request Questionnaire Example (if patient_id and hospital_id are empty then broadcast, if hospital_id is empty then unicast, if patient_id is empty then multicast)
+```
+{
+   "clinician_id":"",
+   "patient_id": "user123",
+   "hospital_id": "",   
+   "type":"request_questionnaire",
+   "data":{
+      "questionnaire_id":"q123",
+      "task_id":"t123"
+   },
+   "language":"",
+   "message":""
+}
+```
+JSON Request Mood Example
+```
+{
+   "clinician_id":"",
+   "patient_id": "user123",
+   "hospital_id": "",
+   "type":"request_mood",
+   "data":{
+      "task_id":"t123"
+   },
+   "language":"",
+   "message":""
+}
+```
+JSON Request Diary Example
+```
+{
+   "clinician_id":"",
+   "patient_id": "user123",
+   "hospital_id": "", 
+   "type":"request_diary",
+   "data":{
+      "task_id":"t123"
+   },
+   "language":"",
+   "message":""
+}
+```
+JSON Notification Example
+```
+{
+   "clinician_id":"",
+   "patient_id": "user123",
+   "hospital_id": "",
+   "type":"notification",
+   "data":{
+   },
+   "language":"",
+   "message":""
+}
+```
+JSON Message Example
+```
+{
+   "clinician_id":"",
+   "patient_id": "user123",
+   "hospital_id": "",
+   "type":"message",
+   "data":{
+      "sender_id": "sergas-breast-cancer",
+      "sender_name": "Your Doctor", 
+      "message": "Please don't forget your pills", 
+      "when": "2021-03-03T16:09:41.894+03:00"
+   },
+   "language":"",
+   "message":"You have a new message."
+}

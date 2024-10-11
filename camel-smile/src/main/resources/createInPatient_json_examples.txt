@@ -1,0 +1,91 @@
+Assign full Resource JSON payload in the right format
+Resource list can be found here: https://www.hl7.org/fhir/stu3/resourcelist.html
+
+JSON batch payload to create a Patient records (multiple patients can be added in "patients" array)
+```
+{
+	"patients": [{
+		"inPatient": {
+			"patient": {
+				"id": "UKCMPatient.I2398Zzk1",
+				"birthDate": "1962-01-01T00:00:00",
+				"deceasedBoolean": false,
+				"gender": "male",
+				"maritalStatus": {
+					"coding": [{
+						"code": "UNK",
+						"system": "http://hl7.org/fhir/ValueSet/marital-status"
+					}],
+					"text": "unknown"
+				},
+				"resourceType": "Patient"
+			},
+			"encounters": [{
+					"id": "UKCMEpisode.iHI750326H2",
+					"class": {
+						"code": "IMP",
+						"system": "http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"
+					},
+					"period": {
+						"end": "2015-02-27T16:00:00+01:22",
+						"start": "2015-02-24T19:00:00+01:22"
+					},
+					"status": "finished",
+					"subject": {
+						"display": "UKCMPatient.I2398Zzk1",
+						"reference": "UKCMPatient.I2398Zzk1"
+					},
+					"resourceType": "Encounter"
+				},
+				{
+					"id": "UKCMEpisode.D93989tB6",
+					"class": {
+						"code": "IMP",
+						"system": "http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"
+					},
+					"period": {
+						"end": "2015-04-02T14:00:00+01:22",
+						"start": "2015-03-24T09:30:00+01:22"
+					},
+					"status": "finished",
+					"subject": {
+						"display": "UKCMPatient.I2398Zzk1",
+						"reference": "UKCMPatient.I2398Zzk1"
+					},
+					"resourceType": "Encounter"
+				}
+			],
+			"compositions": [{
+					"id": "UKCMHospDiscTxt.T30PTB1.1",
+					"author": [{
+						"display": "Unknown Author"
+					}],
+					"date": "2005-01-13T13:00:00+01:22",
+					"encounter": {
+						"id": "UKCMEpisode.RyC4451sfD2",
+						"display": "Source: Hospitalization ecounter",
+						"reference": "UKCMEpisode.RyC4451sfD2"
+					},
+					"section": [{
+						"text": {
+							"div": "<div>Bolnica sprejeta zaradi načrtovane operacije desnostranskih krčnih žil. Po predoperativni pripravi smo dne 12.1.2005 naredili desnostransko krosektomijo z ekstirpacijo posameznih varikozno spremenjenih ven. Postoperativni potek je brez zapletov, rane celijo p.p.. Bolnico odpuščamo v domačo oskrbo in svetujemo Ketonal kapsule proti bolečinam, po potrebi. Nujno je vsakodneno povijanje desno noge  z elastičnim povojem 15 dni podnevi in ponoči, nato pa še 15 dni samo podnevi.  Kontrola v Ambulanti za žilno kirurgijo čez 10 dni, zaradi odstranitve šivov, na ponedeljek dopoldan.</div>",
+							"status": "additional"
+						}
+					}],
+					"status": "final",
+					"subject": {
+						"display": "UKCMPatient.AER87950e6",
+						"reference": "UKCMPatient.AER87950e6"
+					},
+					"title": "epicrisis",
+					"type": {
+						"text": "3:epicrisis"
+					},
+					"resourceType": "Composition"
+				}
+
+			]
+		}
+	}]
+}
+```

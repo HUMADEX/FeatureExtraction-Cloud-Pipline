@@ -1,0 +1,455 @@
+package um.persist.chatbot;
+
+import java.util.LinkedList;
+//import javafx.util;
+
+import org.springframework.stereotype.Service;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+/**
+ *
+ * @author UM FERI
+ * @date JAN 2021
+ * @description Chatbot PREM/PROM available lists of questionnaires for all languages
+ *
+ */
+
+@Service("persistPremPromAPI")
+
+public class PersistPremPromAPI
+{
+	
+	public PersistPremPromAPI()  { }
+	
+	
+    private String language_code ="";
+	private String persist_oid = "";
+	private String chatbot_id = "";
+	private String questionary_title = "";
+	
+	 public String getLanguageCode() 
+	 {
+	        return language_code;
+	 }
+
+	public void setLanguageCode(String language_code) 
+	{
+	        this.language_code = language_code;
+	}
+	
+	public String getPersistOid() 
+    {
+	        return persist_oid;
+	}
+
+	public void setPersistOid(String persist_oid) 
+	{
+	        this.persist_oid = persist_oid;
+	}
+	
+	public String getChatbotId() 
+    {
+	        return chatbot_id;
+	}
+
+	public void setChatbotId(String chatbot_id) 
+	{
+	        this.chatbot_id = chatbot_id;
+	}
+	
+	public void setQuestionaryTitle(String questionary_title) 
+	{
+	        this.questionary_title = questionary_title;
+	}
+	
+	public String getQuestionaryTitle() 
+    {
+	        return questionary_title;
+	}
+
+	public LinkedList<PersistPremPromAPI> LangEnglish()
+	{
+		LinkedList<PersistPremPromAPI> q =  new LinkedList<PersistPremPromAPI>();
+		PersistPremPromAPI pq = new PersistPremPromAPI();
+		pq.setLanguageCode("en");
+		pq.setChatbotId("survey_form_gad_7");
+		pq.setPersistOid("oid1");
+		pq.setQuestionaryTitle("General Anxiety Disorder, 7");
+		q.add(pq);
+		
+		
+	    pq = new PersistPremPromAPI();
+		pq.setLanguageCode("en");
+		pq.setChatbotId("survey_form_phq2");
+		pq.setPersistOid("oid2");
+		pq.setQuestionaryTitle("Patient Health Questionnaire, 2");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("en");
+		pq.setChatbotId("survey_form_phq9");
+		pq.setPersistOid("oid3");
+		pq.setQuestionaryTitle("Patient Health Questionnaire, 9");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("en");
+		pq.setChatbotId("survey_form_qlqc30");
+		pq.setPersistOid("oid4");
+		pq.setQuestionaryTitle("Quality of Life of Cancer Patients, 30");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("en");
+		pq.setChatbotId("survey_form_isi");
+		pq.setPersistOid("oid5");
+		pq.setQuestionaryTitle("Insomnia Sleep Questionnaire");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("en");
+		pq.setChatbotId("survey_form_gses_en");
+		pq.setPersistOid("oid6");
+		pq.setQuestionaryTitle("General Self-Efficacy Scale");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("en");
+		pq.setChatbotId("survey_form_whodas_en");
+		pq.setPersistOid("oid7");
+		pq.setQuestionaryTitle("World health organiation disability assesment schedule 2.0");
+		q.add(pq);
+		
+		
+		//==========================================================================
+		
+		
+		PersistPremPromManual pq2 = new PersistPremPromManual();
+		pq2 = new PersistPremPromManual();
+		pq2.setLanguageCode("en");
+		pq2.setChatbotId("colorectal_cancer_interval_en");
+		pq2.setPersistOid("oid8");
+		pq2.setQuestionaryTitle("Colorectal cancer interval");
+		pq2.setQuestionaryType("non-loop");
+		q.add(pq2);
+		
+		
+		pq2 = new PersistPremPromManual();
+		pq2.setLanguageCode("en");
+		pq2.setChatbotId("breast_cancer_interval_en");
+		pq2.setPersistOid("oid9");
+		pq2.setQuestionaryTitle("Breast cancer recurrence or new primary breast cancer");
+		pq2.setQuestionaryType("non-loop");
+		q.add(pq2);
+		
+		
+		pq2 = new PersistPremPromManual();
+		pq2.setLanguageCode("en");
+		pq2.setChatbotId("Lymphedema_ques_en");
+		pq2.setPersistOid("oid10");
+		pq2.setQuestionaryTitle("Lymphedema");
+		pq2.setQuestionaryType("non-loop");
+		q.add(pq2);
+		
+		
+		pq2 = new PersistPremPromManual();
+		pq2.setLanguageCode("en");
+		pq2.setChatbotId("pain_ques_en");
+		pq2.setPersistOid("oid11");
+		pq2.setQuestionaryTitle("Pain");
+		pq2.setQuestionaryType("non-loop");
+		q.add(pq2);
+		
+		
+		pq2 = new PersistPremPromManual();
+		pq2.setLanguageCode("en");
+		pq2.setChatbotId("Hormonal_disbalances_ques_en");
+		pq2.setPersistOid("oid12");
+		pq2.setQuestionaryTitle("Hormonal disbalances");
+		pq2.setQuestionaryType("non-loop");
+		q.add(pq2);
+		
+		
+		pq2 = new PersistPremPromManual();
+		pq2.setLanguageCode("en");
+		pq2.setChatbotId("Sexual_dsyfunction_ques_en");
+		pq2.setPersistOid("oid13");
+		pq2.setQuestionaryTitle("Sexual dysfunction");
+		pq2.setQuestionaryType("non-loop");
+		q.add(pq2);
+		
+		
+		pq2 = new PersistPremPromManual();
+		pq2.setLanguageCode("en");
+		pq2.setChatbotId("fatigue_ques_en");
+		pq2.setPersistOid("oid14");
+		pq2.setQuestionaryTitle("Fatigue");
+		pq2.setQuestionaryType("non-loop");
+		q.add(pq2);
+		
+		
+		pq2 = new PersistPremPromManual();
+		pq2.setLanguageCode("en");
+		pq2.setChatbotId("cognitive_function_ques_en");
+		pq2.setPersistOid("oid15");
+		pq2.setQuestionaryTitle("Cognitive function");
+		pq2.setQuestionaryType("non-loop");
+		q.add(pq2);
+		
+		
+		pq2 = new PersistPremPromManual();
+		pq2.setLanguageCode("en");
+		pq2.setChatbotId("Malnutrition_ques_en");
+		pq2.setPersistOid("oid16");
+		pq2.setQuestionaryTitle("Malnutrition");
+		pq2.setQuestionaryType("non-loop");
+		q.add(pq2);
+		
+		
+		pq2 = new PersistPremPromManual();
+		pq2.setLanguageCode("en");
+		pq2.setChatbotId("Gastrointestinal_conditions_ques_en");
+		pq2.setPersistOid("oid17");
+		pq2.setQuestionaryTitle("Gastrointestinal conditions");
+		pq2.setQuestionaryType("non-loop");
+		q.add(pq2);
+		
+		
+		pq2 = new PersistPremPromManual();
+		pq2.setLanguageCode("en");
+		pq2.setChatbotId("gpaq_ques_en");
+		pq2.setPersistOid("oid18");
+		pq2.setQuestionaryTitle("Global Physical Activity Questionnaire");
+		pq2.setQuestionaryType("non-loop");
+		q.add(pq2);
+		
+		return q;
+				
+	}
+	
+	public LinkedList<PersistPremPromAPI> LangSlovenian()
+	{
+		LinkedList<PersistPremPromAPI> q =  new LinkedList<PersistPremPromAPI>();
+		PersistPremPromAPI pq = new PersistPremPromAPI();
+		pq.setLanguageCode("sl");
+		pq.setChatbotId("survey_form_phq9_si");
+		pq.setPersistOid("oid1_sl");
+		pq.setQuestionaryTitle("Vprašalnik o bolnikovem zdravju, 9");
+		q.add(pq);
+
+
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("sl");
+		pq.setChatbotId("survey_form_phq2_si");
+		pq.setPersistOid("oid2_sl");
+		pq.setQuestionaryTitle("Vprašalnik o bolnikovem zdravju, 2");
+		q.add(pq);
+
+
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("sl");
+		pq.setChatbotId("survey_form_gad_7_si");
+		pq.setPersistOid("oid3_sl");
+		pq.setQuestionaryTitle("Generalizirana anksiozna motnja, 7");
+		q.add(pq);
+
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("sl");
+		pq.setChatbotId("survey_form_qlqc30_si");
+		pq.setPersistOid("oid4_sl");
+		pq.setQuestionaryTitle("Kvaliteta življenja bolnikov z rakom, 30");
+		q.add(pq);
+
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("sl");
+		pq.setChatbotId("survey_form_gses_si");
+		pq.setPersistOid("oid5_sl");
+		pq.setQuestionaryTitle("Splošna lestvica samo-učinkovitosti");
+		q.add(pq);
+
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("sl");
+		pq.setChatbotId("survey_form_whodas_si");
+		pq.setPersistOid("oid6_sl");
+		pq.setQuestionaryTitle("Vprašalnik svetovne zdravstvene organizacije (SZO) za ocenjevanje zmanjšane zmožnosti");
+		q.add(pq);
+
+		return q;
+
+	}
+	
+	public LinkedList<PersistPremPromAPI> LangLatvian()
+	{
+		LinkedList<PersistPremPromAPI> q =  new LinkedList<PersistPremPromAPI>();
+		PersistPremPromAPI pq = new PersistPremPromAPI();
+		pq.setLanguageCode("lv");
+		pq.setChatbotId("survey_form_gad_7_lt");
+		pq.setPersistOid("oid1_lv");
+		pq.setQuestionaryTitle("Vispārējs trauksme, 7");
+		q.add(pq);
+		
+		
+	    pq = new PersistPremPromAPI();
+		pq.setLanguageCode("lv");
+		pq.setChatbotId("survey_form_phq2_lt");
+		pq.setPersistOid("oid2_lv");
+		pq.setQuestionaryTitle("Pacienta veselības anketa, 2");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("lv");
+		pq.setChatbotId("survey_form_phq9_lt");
+		pq.setPersistOid("oid3_lv");
+		pq.setQuestionaryTitle("Pacienta veselības anketa, 9");
+		q.add(pq);
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("lv");
+		pq.setChatbotId("survey_form_qlqc30_lt");
+		pq.setPersistOid("oid4_lv");
+		pq.setQuestionaryTitle("Dzīves kvalitāte, 30");
+		q.add(pq);
+		
+		return q;
+				
+	}
+	
+	public LinkedList<PersistPremPromAPI> LangSpanish()
+	{
+		LinkedList<PersistPremPromAPI> q =  new LinkedList<PersistPremPromAPI>();
+		PersistPremPromAPI pq = new PersistPremPromAPI();
+		pq.setLanguageCode("es");
+		pq.setChatbotId("survey_form_gad_7_es");
+		pq.setPersistOid("oid1_es");
+		pq.setQuestionaryTitle("Trastorno de ansiedad general, 7");
+		q.add(pq);
+		
+		
+	    pq = new PersistPremPromAPI();
+		pq.setLanguageCode("es");
+		pq.setChatbotId("survey_form_phq2_es");
+		pq.setPersistOid("oid2_es");
+		pq.setQuestionaryTitle("Cuestionario de salud del paciente, 2");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("es");
+		pq.setChatbotId("survey_form_phq9_es");
+		pq.setPersistOid("oid3_es");
+		pq.setQuestionaryTitle("Cuestionario de salud del paciente, 9");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("es");
+		pq.setChatbotId("survey_form_qlqc30_es");
+		pq.setPersistOid("oid4_es");
+		pq.setQuestionaryTitle("Calidad de vida de los pacientes con cáncer, 30");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("es");
+		pq.setChatbotId("survey_form_gses_es");
+		pq.setPersistOid("oid5_es");
+		pq.setQuestionaryTitle("Escala de autoeficacia general");
+		q.add(pq);
+		
+		return q;
+				
+	}
+	
+	public LinkedList<PersistPremPromAPI> LangFrench()
+	{
+		LinkedList<PersistPremPromAPI> q =  new LinkedList<PersistPremPromAPI>();
+		PersistPremPromAPI pq = new PersistPremPromAPI();
+		pq.setLanguageCode("fr");
+		pq.setChatbotId("survey_form_gad_7_fr");
+		pq.setPersistOid("oid1_fr");
+		pq.setQuestionaryTitle("Trouble d'anxiété générale, 7");
+		q.add(pq);
+		
+		
+	    pq = new PersistPremPromAPI();
+		pq.setLanguageCode("fr");
+		pq.setChatbotId("survey_form_phq2_fr");
+		pq.setPersistOid("oid2_fr");
+		pq.setQuestionaryTitle("Questionnaire sur la santé des patients, 2");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("fr");
+		pq.setChatbotId("survey_form_phq9_fr");
+		pq.setPersistOid("oid3_fr");
+		pq.setQuestionaryTitle("Questionnaire sur la santé des patients, 9");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("fr");
+		pq.setChatbotId("survey_form_qlqc30_fr");
+		pq.setPersistOid("oid4_fr");
+		pq.setQuestionaryTitle("Ualité de la vie des patients cancéreux, 30");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("fr");
+		pq.setChatbotId("survey_form_gses_fr");
+		pq.setPersistOid("oid5_fr");
+		pq.setQuestionaryTitle("Échelle d'auto-efficacité générale");
+		q.add(pq);
+		
+		return q;
+				
+	}
+	
+	public LinkedList<PersistPremPromAPI> LangRussian()
+	{
+		LinkedList<PersistPremPromAPI> q =  new LinkedList<PersistPremPromAPI>();
+		PersistPremPromAPI pq = new PersistPremPromAPI();
+		pq.setLanguageCode("ru");
+		pq.setChatbotId("survey_form_gad_7_ru");
+		pq.setPersistOid("oid1_ru");
+		pq.setQuestionaryTitle("Общее тревожное расстройство, 7");
+		q.add(pq);
+		
+		
+	    pq = new PersistPremPromAPI();
+		pq.setLanguageCode("ru");
+		pq.setChatbotId("survey_form_phq2_ru");
+		pq.setPersistOid("oid2_ru");
+		pq.setQuestionaryTitle("Опросник здоровья пациента, 2");
+		q.add(pq);
+		
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("ru");
+		pq.setChatbotId("survey_form_phq9_ru");
+		pq.setPersistOid("oid3_ru");
+		pq.setQuestionaryTitle("Опросник здоровья пациента, 9");
+		q.add(pq);
+		
+		pq = new PersistPremPromAPI();
+		pq.setLanguageCode("ru");
+		pq.setChatbotId("survey_form_qlqc30_ru");
+		pq.setPersistOid("oid4_ru");
+		pq.setQuestionaryTitle("Качество жизни, 30");
+		q.add(pq);
+		
+		return q;
+				
+	}
+
+}
+
